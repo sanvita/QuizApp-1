@@ -17,7 +17,8 @@ def about():
 #testiņš
 @app.route('/tets',methods = ['POST', 'GET'])
 def tets():
-    return render_template("tets.html")
+    parametri=["IQ","Augums","Kājas izmērs"]
+    return render_template("tets.html", parametri=parametri)
     
 #Pārbaudes lapa, lai saprastu, ka kods vispār strādā
 @app.route('/health')
