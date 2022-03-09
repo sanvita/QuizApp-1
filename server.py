@@ -8,11 +8,17 @@ app = Flask(__name__)
 @app.route('/',methods = ['POST', 'GET'])
 def root():
     return render_template("index.html")
+
+#ceļš uz about
+@app.route('/about',methods = ['POST', 'GET'])
+def about():
+    return render_template("about.html")
+
     
 #Pārbaudes lapa, lai saprastu, ka kods vispār strādā
 @app.route('/health')
 def health():
-  return "OK"
+  return "Viss labii"
 
 if __name__ == '__main__':
   app.run(debug="true")
