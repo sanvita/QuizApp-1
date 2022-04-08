@@ -1,12 +1,15 @@
 <html>
-    <head>
-        <title>Par autoru</title>
-        <meta charset="UTF-8"/>
-    </head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <body>
-        {%for parametrs in parametri%}
-        <h1>{{parametrs}}</h1>
-        {%endfor%}
-        <img src="https://www.purina.lv/sites/default/files/styles/nppe_breed_selector_500/public/breed_library/cat_abyssinian.jpg?itok=zVgXCLIvhttps://www.rezekneszinas.lv/userfiles/more_image/e9a975f2dabefcace9a676fb692798cf.JPG"/>
+        <h1>Parametri no servera</h1>
+        {% for par in parametri %} 
+        <h2> {{par}} </h2>
+        {% endfor %}
+
+        {% for image in images %}
+        <img src="{{image}}" width="400"/>
+        <br>
+        {% endfor %}
+        <p>Šīs ir bildes!</p>
     </body>
 </html>
